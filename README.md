@@ -1,21 +1,22 @@
 # AI - ассистент повара по поиску наилучших рецептов
 ## Быстрый запуск:
-1. Создайте виртуальное окружение:
+### 1. Создайте виртуальное окружение:
 ```
 python -m venv .venv
 source .venv/bin/activate  # для Linux/Mac
 # или
 .venv\Scripts\activate  # для Windows
 ```
-2. Установите зависимости:
+### 2. Установите зависимости:
 ```
 pip install -r requirements.txt
 ```
-3. Создайте в каталоге проекта файл окружения .env и внесите свой API-ключ:
+### 3. Создайте в каталоге проекта файл окружения .env и внесите свой API-ключ:
 ```
 API_KEY=apikey_apikey_apikey
 ```
-4. Измените провайдера и модель на тех которых вы будете использовать:\
+### 4. Измените провайдера и модель на тех которых вы будете использовать:\
+
 Найдите в файле model.py следующие строки и замените значения base_url и model на свои
 ```model.py
  self.client = OpenAI(base_url="https://routerai.ru/api/v1", api_key=self.api_key,)
@@ -23,7 +24,7 @@ API_KEY=apikey_apikey_apikey
 ```model.py
 model="qwen/qwen3.5-9b"
 ```
-5. Запустите
+### 5. Запустите
 ```
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 ```
