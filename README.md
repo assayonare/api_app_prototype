@@ -15,7 +15,8 @@ pip install -r requirements.txt
 ```
 API_KEY=apikey_apikey_apikey
 ```
-4. Измените провайдера и модель на тех которых вы будете использовать:
+4. Измените провайдера и модель на тех которых вы будете использовать:\
+Найдите в файле model.py следующие строки и замените значения base_url и model на свои
 ```model.py
  self.client = OpenAI(base_url="https://routerai.ru/api/v1", api_key=self.api_key,)
 ```
