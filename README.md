@@ -15,7 +15,15 @@ pip install -r requirements.txt
 ```
 API_KEY=apikey_apikey_apikey
 ```
-4. Запустите
+4. Измените провайдера и модель на тех которых вы будете использовать:
+```model.py
+ self.client = OpenAI(base_url="https://routerai.ru/api/v1", api_key=self.api_key,)
+```
+\
+```model.py
+model="qwen/qwen3.5-9b"
+```
+5. Запустите
 ```
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 ```
@@ -125,7 +133,7 @@ curl -X POST "http://localhost:8000/chat" \
 }
 ```
 
-Для изменения формата ответа необходимо скорректировать системный промпт находящийся в файле prompts/system_prompt.md
+Для изменения формата ответа необходимо скорректировать системный промпт находящийся в файле prompts/system_prompt.md \
 Пример системного промпта:
 ```
 Ты кулинарный эксперт. Отвечай ТОЛЬКО JSON с рецептом.
