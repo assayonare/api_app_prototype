@@ -63,7 +63,7 @@ if not API_KEY:
 
 system_prompt = load_system_prompt()
 agent_model = Model(api_key=API_KEY, system_prompt=system_prompt)
-print(system_prompt)
+# print(system_prompt)
 app = FastAPI()
 
 @app.post("/chat", response_model=ChatResponse)

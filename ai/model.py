@@ -15,7 +15,7 @@ class Model(BaseAI):
     def generate_response(self, prompt) -> str:
         if self.system_prompt:
             prompt = f"{self.system_prompt}\n\n{prompt}"
-            print(f"Combined prompt: {prompt}")
+            # print(f"Combined prompt: {prompt}")
         
         completion = self.client.chat.completions.create(
             model="qwen/qwen3.5-9b",
