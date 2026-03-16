@@ -19,7 +19,6 @@ API_KEY=apikey_apikey_apikey
 ```model.py
  self.client = OpenAI(base_url="https://routerai.ru/api/v1", api_key=self.api_key,)
 ```
-\
 ```model.py
 model="qwen/qwen3.5-9b"
 ```
